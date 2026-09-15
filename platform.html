@@ -6348,6 +6348,42 @@ body {
     height: 270px;
   }
 }
+@media (max-width: 620px) {
+  #platform .mobile-photo-showcase .app-copy {
+    padding-left: min(25px, 6.4vw);
+    padding-right: 10px;
+  }
+  #platform .mobile-photo-showcase .app-phone-gallery {
+    width: 100%;
+    height: clamp(260px, 77vw, 300px);
+    overflow: hidden;
+  }
+  #platform .mobile-photo-showcase .phone-photo {
+    position: absolute;
+    bottom: 4px;
+    display: block;
+    width: auto;
+    max-width: none;
+  }
+  #platform .mobile-photo-showcase .phone-photo-lessons {
+    z-index: 1;
+    left: -7%;
+    height: 94%;
+    transform: none;
+  }
+  #platform .mobile-photo-showcase .phone-photo-practice {
+    z-index: 3;
+    left: calc(50% + 9px);
+    height: 99%;
+    transform: translateX(-50%);
+  }
+  #platform .mobile-photo-showcase .phone-photo-progress {
+    z-index: 2;
+    right: -3%;
+    height: 94%;
+    transform: none;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   #platform .mobile-photo-showcase .phone-photo {
     will-change: auto;
@@ -10349,7 +10385,11 @@ function enhancePlatformTestimonials() {
   track.addEventListener("pointermove", onPointerMove, { passive: false });
   track.addEventListener("pointerup", event => finishDrag(event));
   track.addEventListener("pointercancel", event => finishDrag(event, true));
-  track.addEventListener("lostpointercapture", event => finishDrag(event, true));
+  track.addEventListener("lostpointercapture", event => {
+    // Touch starts with implicit capture on the card child. Its bubbled loss
+    // when capture transfers to the track must not cancel the swipe.
+    if (event.target === track) finishDrag(event, true);
+  });
   track.addEventListener("dragstart", event => event.preventDefault());
 
   track.addEventListener("keydown", event => {
