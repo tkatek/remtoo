@@ -1,0 +1,429 @@
+/* Compact image-led mobile app showcase. */
+#platform .mobile-app-section.mobile-photo-showcase {
+  width: min(1480px, calc(100vw - clamp(28px, 4vw, 72px)));
+  max-width: none;
+  margin-inline: auto;
+  padding: clamp(24px, 2.3vw, 38px) 0 clamp(30px, 2.6vw, 46px);
+  overflow: visible;
+}
+
+#platform .mobile-photo-showcase .app-layout {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: clamp(420px, 29vw, 480px);
+  padding: 0;
+  grid-template-columns: minmax(350px, 38fr) minmax(0, 62fr);
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #d3e5f6;
+  border-radius: clamp(22px, 1.8vw, 30px);
+  background:
+    radial-gradient(circle at 31% 28%, rgba(124, 190, 255, .13) 0 13%, transparent 13.3%),
+    radial-gradient(ellipse at 86% 73%, rgba(118, 184, 250, .14) 0 20%, transparent 20.3%),
+    linear-gradient(112deg, #fbfdff 0%, #f5faff 48%, #eaf5ff 100%);
+  box-shadow: 0 18px 45px rgba(23, 73, 124, .06);
+  isolation: isolate;
+}
+
+#platform .mobile-photo-showcase .app-layout::before {
+  position: absolute;
+  z-index: -1;
+  right: -10%;
+  bottom: -54%;
+  width: 54%;
+  aspect-ratio: 1;
+  background: rgba(85, 164, 246, .09);
+  border-radius: 50%;
+  content: "";
+}
+
+#platform .mobile-photo-showcase .app-copy {
+  position: relative;
+  z-index: 3;
+  align-self: center;
+  padding: clamp(28px, 3vw, 44px) clamp(22px, 2.8vw, 45px) clamp(28px, 3vw, 44px) clamp(36px, 4.4vw, 70px);
+  text-align: left;
+}
+
+#platform .mobile-photo-showcase .icon-eyebrow {
+  display: flex;
+  margin: 0 0 18px;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: #0871ef;
+  font-size: clamp(12px, .82vw, 15px);
+  font-weight: 850;
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+
+#platform .mobile-photo-showcase .icon-eyebrow svg {
+  width: 22px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.9;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+#platform .mobile-photo-showcase .app-copy h2 {
+  max-width: 570px;
+  margin: 0;
+  color: #071b43;
+  font-size: clamp(35px, 2.65vw, 49px);
+  font-weight: 850;
+  line-height: 1.06;
+  letter-spacing: -.045em;
+}
+
+#platform .mobile-photo-showcase .app-copy h2 > span {
+  display: block;
+}
+
+#platform .mobile-photo-showcase .app-copy h2 strong {
+  color: #0874f7;
+  font-weight: inherit;
+}
+
+#platform .mobile-photo-showcase .app-copy > p:not(.eyebrow) {
+  max-width: 520px;
+  margin: 18px 0 17px;
+  color: #5b6d8b;
+  font-size: clamp(14px, .98vw, 17px);
+  line-height: 1.5;
+}
+
+#platform .mobile-photo-showcase .app-benefits {
+  display: grid;
+  margin: 0 0 23px;
+  padding: 0;
+  gap: 10px;
+  list-style: none;
+}
+
+#platform .mobile-photo-showcase .app-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #344966;
+  font-size: clamp(13px, .88vw, 16px);
+  line-height: 1.25;
+}
+
+#platform .mobile-photo-showcase .app-benefits li::before {
+  display: grid;
+  width: 27px;
+  height: 27px;
+  flex: 0 0 27px;
+  place-items: center;
+  color: #0872f1;
+  background: #deefff;
+  border-radius: 50%;
+  content: "✓";
+  font-size: 12px;
+  font-weight: 900;
+}
+
+#platform .mobile-photo-showcase .store-badges {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  gap: 11px;
+}
+
+#platform .mobile-photo-showcase .store-badges a {
+  width: auto;
+  min-width: 158px;
+  height: 49px;
+  padding: 5px 12px;
+  gap: 9px;
+  border-radius: 7px;
+  background: #050505;
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(8, 20, 39, .12);
+}
+
+#platform .mobile-photo-showcase .store-badges a:hover {
+  transform: translateY(-2px);
+  background: #111;
+}
+
+#platform .mobile-photo-showcase .store-badges a > span {
+  display: grid;
+  width: 25px;
+  height: 29px;
+  place-items: center;
+  font-size: 0;
+}
+
+#platform .mobile-photo-showcase .store-badges a > span svg {
+  width: 100%;
+  height: 100%;
+}
+
+#platform .mobile-photo-showcase .store-badges .apple-logo svg {
+  fill: #fff;
+}
+
+#platform .mobile-photo-showcase .store-badges p {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  line-height: 1.03;
+}
+
+#platform .mobile-photo-showcase .store-badges small {
+  font-size: 7px;
+}
+
+#platform .mobile-photo-showcase .store-badges strong {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+#platform .mobile-photo-showcase .app-phone-gallery {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: clamp(405px, 29vw, 476px);
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  perspective: 1400px;
+}
+
+#platform .mobile-photo-showcase .phone-gallery-halo {
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  left: 9%;
+  width: 81%;
+  height: 78%;
+  background: radial-gradient(ellipse, rgba(136, 199, 255, .32), rgba(220, 239, 255, .2) 47%, transparent 72%);
+  border-radius: 50%;
+}
+
+#platform .mobile-photo-showcase .phone-gallery-trail {
+  position: absolute;
+  z-index: 0;
+  right: 8%;
+  bottom: 8%;
+  left: 11%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(16, 116, 242, .4), transparent);
+  border-radius: 999px;
+}
+
+#platform .mobile-photo-showcase .phone-photo {
+  position: absolute;
+  z-index: 2;
+  bottom: -2%;
+  display: block;
+  width: auto;
+  max-width: none;
+  object-fit: contain;
+  pointer-events: none;
+  user-select: none;
+  filter: drop-shadow(0 16px 17px rgba(9, 35, 67, .14));
+  transform-origin: 50% 85%;
+  will-change: transform, opacity;
+}
+
+#platform .mobile-photo-showcase .phone-photo-lessons {
+  z-index: 1;
+  left: 6.5%;
+  height: 94%;
+  transform: translateY(12px);
+}
+
+#platform .mobile-photo-showcase .phone-photo-practice {
+  z-index: 3;
+  left: 50%;
+  height: 98%;
+  transform: translate(-50%, -4px);
+}
+
+#platform .mobile-photo-showcase .phone-photo-progress {
+  z-index: 2;
+  right: 12%;
+  height: 93%;
+  transform: translateY(11px);
+}
+
+@media (max-width: 1120px) {
+  #platform .mobile-photo-showcase .app-layout {
+    grid-template-columns: minmax(320px, 39fr) minmax(0, 61fr);
+  }
+
+  #platform .mobile-photo-showcase .app-copy {
+    padding-left: 34px;
+    padding-right: 13px;
+  }
+
+  #platform .mobile-photo-showcase .store-badges a {
+    min-width: 143px;
+  }
+}
+
+@media (max-width: 900px) {
+  #platform .mobile-app-section.mobile-photo-showcase {
+    width: calc(100vw - 30px);
+  }
+
+  #platform .mobile-photo-showcase .app-layout {
+    min-height: 0;
+    grid-template-columns: 1fr;
+  }
+
+  #platform .mobile-photo-showcase .app-copy {
+    width: min(690px, 100%);
+    padding: 42px 34px 8px;
+    justify-self: center;
+    text-align: center;
+  }
+
+  #platform .mobile-photo-showcase .icon-eyebrow,
+  #platform .mobile-photo-showcase .store-badges {
+    justify-content: center;
+  }
+
+  #platform .mobile-photo-showcase .app-copy h2,
+  #platform .mobile-photo-showcase .app-copy > p:not(.eyebrow) {
+    margin-inline: auto;
+  }
+
+  #platform .mobile-photo-showcase .app-benefits {
+    width: min(535px, 100%);
+    margin-inline: auto;
+    grid-template-columns: 1fr 1fr;
+    text-align: left;
+  }
+
+  #platform .mobile-photo-showcase .app-phone-gallery {
+    width: min(780px, 100%);
+    height: 405px;
+    margin-inline: auto;
+  }
+
+  #platform .mobile-photo-showcase .phone-photo {
+    bottom: 0;
+  }
+
+  #platform .mobile-photo-showcase .phone-photo-lessons,
+  #platform .mobile-photo-showcase .phone-photo-progress {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 620px) {
+  #platform .mobile-app-section.mobile-photo-showcase {
+    width: calc(100vw - 20px);
+    padding: 20px 0 28px;
+  }
+
+  #platform .mobile-photo-showcase .app-layout {
+    border-radius: 22px;
+  }
+
+  #platform .mobile-photo-showcase .app-copy {
+    padding: 32px 19px 2px;
+    text-align: left;
+  }
+
+  #platform .mobile-photo-showcase .icon-eyebrow,
+  #platform .mobile-photo-showcase .store-badges {
+    justify-content: flex-start;
+  }
+
+  #platform .mobile-photo-showcase .app-copy h2 {
+    margin-inline: 0;
+    font-size: clamp(31px, 9.2vw, 38px);
+  }
+
+  #platform .mobile-photo-showcase .app-copy > p:not(.eyebrow) {
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  #platform .mobile-photo-showcase .app-benefits {
+    width: 100%;
+    margin: 0 0 18px;
+    grid-template-columns: 1fr 1fr;
+    gap: 9px 13px;
+  }
+
+  #platform .mobile-photo-showcase .app-benefits li {
+    align-items: flex-start;
+    gap: 7px;
+    font-size: 12px;
+  }
+
+  #platform .mobile-photo-showcase .app-benefits li::before {
+    width: 21px;
+    height: 21px;
+    flex-basis: 21px;
+    font-size: 9px;
+  }
+
+  #platform .mobile-photo-showcase .store-badges {
+    gap: 8px;
+  }
+
+  #platform .mobile-photo-showcase .store-badges a {
+    min-width: 0;
+    width: calc(50% - 4px);
+    height: 45px;
+    padding-inline: 9px;
+  }
+
+  #platform .mobile-photo-showcase .store-badges a > span {
+    width: 21px;
+    height: 25px;
+  }
+
+  #platform .mobile-photo-showcase .store-badges small {
+    font-size: 6px;
+  }
+
+  #platform .mobile-photo-showcase .store-badges strong {
+    font-size: 14px;
+  }
+
+  #platform .mobile-photo-showcase .app-phone-gallery {
+    height: clamp(265px, 76vw, 320px);
+  }
+
+  #platform .mobile-photo-showcase .phone-photo-lessons {
+    left: -9%;
+    height: 94%;
+  }
+
+  #platform .mobile-photo-showcase .phone-photo-practice {
+    height: 99%;
+  }
+
+  #platform .mobile-photo-showcase .phone-photo-progress {
+    right: -1%;
+    height: 92%;
+  }
+}
+
+@media (max-width: 390px) {
+  #platform .mobile-photo-showcase .app-copy {
+    padding-inline: 16px;
+  }
+
+  #platform .mobile-photo-showcase .app-phone-gallery {
+    height: 270px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #platform .mobile-photo-showcase .phone-photo {
+    will-change: auto;
+  }
+}

@@ -1,0 +1,16 @@
+/* Keep the widened Platform laptop and phone fully inside the hero at every breakpoint. */
+#platform .hero-devices {
+  height: clamp(390px, 36vw, 690px);
+}
+
+@media (max-width: 900px) {
+  #platform .hero-devices {
+    height: clamp(360px, 58vw, 520px);
+  }
+}
+
+@media (max-width: 620px) {
+  #platform .hero-devices {
+    height: clamp(270px, 59vw, 370px);
+  }
+}

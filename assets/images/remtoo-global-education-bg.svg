@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1800" preserveAspectRatio="xMidYMid slice" fill="none">
+  <title>Remtoo abstract background accents</title>
+  <desc>Subtle blue and green dot fields with flowing wavy lines.</desc>
+
+  <!-- Flowing wavy lines -->
+  <g id="wave-lines" data-ornament="wave" opacity="0.30" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M-84 1194c180-74 284-53 326 64 38 105 132 137 253 74 106-55 200-54 282 21 60 55 123 67 189 37" stroke="#1684ff" stroke-width="11" stroke-dasharray="24 26"/>
+    <path d="M-56 1247c147-37 240-3 279 102 41 111 151 136 292 67 96-47 177-38 242 28" stroke="#69b7ff" stroke-width="7"/>
+  </g>
+
+  <!-- Dot field -->
+  <g id="dot-field" data-ornament="dots" opacity="0.36" transform="translate(1572 1540)">
+    <g fill="#69b7ff" stroke="none">
+      <circle cx="-405" cy="-8" r="8"/><circle cx="-357" cy="-8" r="8"/><circle cx="-309" cy="-8" r="8"/>
+      <circle cx="-405" cy="40" r="8"/><circle cx="-357" cy="40" r="8"/><circle cx="-309" cy="40" r="8"/>
+      <circle cx="-405" cy="88" r="8"/><circle cx="-357" cy="88" r="8"/><circle cx="-309" cy="88" r="8"/>
+      <circle cx="-405" cy="136" r="8"/><circle cx="-357" cy="136" r="8"/><circle cx="-309" cy="136" r="8"/>
+    </g>
+    <g fill="#25b777" stroke="none">
+      <circle cx="-261" cy="40" r="7"/><circle cx="-261" cy="88" r="7"/><circle cx="-261" cy="136" r="7"/>
+    </g>
+  </g>
+</svg>

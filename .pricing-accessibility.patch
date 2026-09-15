@@ -1,0 +1,40 @@
+*** Begin Patch
+*** Update File: js/pricing.js
+@@
+   document.querySelectorAll('a[href^="#"]').forEach(link => {
+     link.addEventListener("click", event => {
+       const target = document.querySelector(link.getAttribute("href"));
+       if (!target) return;
+       event.preventDefault();
+       target.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+     });
+   });
++
++  document.querySelectorAll(".pricing-plan-card").forEach(card => {
++    const planName = card.querySelector("h3")?.textContent.trim();
++    const planLink = card.querySelector(".pricing-plan-button");
++    if (!planName || !planLink || planLink.hasAttribute("aria-label")) return;
++
++    const visibleLabel = planLink.textContent.trim();
++    const relationship = visibleLabel === "Contact Sales" ? "about" : "with";
++    planLink.setAttribute("aria-label", `${visibleLabel} ${relationship} the ${planName} plan`);
++  });
++
++  const comparisonTable = document.querySelector(".pricing-comparison table");
++  if (comparisonTable && !comparisonTable.hasAttribute("aria-label")) {
++    comparisonTable.setAttribute("aria-label", "Feature availability by Remtoo pricing plan");
++  }
++
++  document.querySelectorAll(
++    ".pricing-comparison th[scope='row'] svg, .pricing-brand-promise li svg, .pricing-faq summary svg"
++  ).forEach(icon => {
++    icon.setAttribute("aria-hidden", "true");
++    icon.setAttribute("focusable", "false");
++  });
++
++  document.querySelectorAll(".pricing-comparison tbody td").forEach(cell => {
++    cell.setAttribute("aria-label", cell.classList.contains("unavailable") ? "Not included" : "Included");
++  });
+ 
+   const billingInputs = [...document.querySelectorAll("input[data-billing]")];
+*** End Patch

@@ -1,0 +1,60 @@
+/* Homepage composition: hero plus school benefits occupy 120% of the viewport. */
+.hero {
+  height: 120vh;
+  min-height: 880px;
+  justify-content: center;
+  padding-top: clamp(34px, 5vh, 66px);
+  padding-bottom: clamp(28px, 4vh, 50px);
+}
+
+.hero .why-section {
+  width: min(1180px, 100%);
+  margin: clamp(30px, 4vh, 50px) auto 0;
+  padding: 0;
+  background: transparent;
+}
+
+.hero .why-section > .section-inner > h2 {
+  font-size: clamp(1.55rem, 2vw, 2rem);
+}
+
+.hero .benefit-grid {
+  margin: clamp(24px, 3vh, 36px) auto 0;
+}
+
+.brand-section {
+  padding: 48px clamp(20px, 5vw, 82px) 44px;
+  background: var(--page);
+}
+
+@media (max-width: 920px) {
+  .hero {
+    height: auto;
+    min-height: 120vh;
+    justify-content: flex-start;
+    overflow: visible;
+  }
+
+  .hero .why-section {
+    margin-top: 46px;
+  }
+
+  .brand-section {
+    padding-top: 38px;
+  }
+}
+
+@media (max-width: 660px) {
+  .hero .why-section {
+    padding: 0;
+  }
+
+  .hero .benefit-grid {
+    margin-top: 30px;
+    margin-bottom: 0;
+  }
+
+  .brand-section {
+    padding: 32px 20px;
+  }
+}

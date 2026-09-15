@@ -1,0 +1,137 @@
+/* Final sizing and contrast pass for the homepage service-assurance strip. */
+
+.home-page .assurance-strip {
+  padding: 28px 0;
+  border-color: #d7e4f2;
+  background: #f6faff;
+}
+
+.home-page .assurance-grid {
+  gap: clamp(18px, 2.4vw, 42px);
+}
+
+.home-page .assurance-grid article {
+  gap: 14px;
+}
+
+.home-page .assurance-grid p {
+  min-width: 0;
+  margin: 0;
+}
+
+.home-page .assurance-icon {
+  width: 56px;
+  height: 56px;
+  flex: 0 0 56px;
+  color: #0874f9;
+  border: 1px solid #dbe8f5;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(6, 50, 101, .08);
+}
+
+.home-page .assurance-symbol {
+  width: 30px;
+  height: 30px;
+  stroke-width: 1.9;
+}
+
+.home-page .assurance-grid strong {
+  display: block;
+  color: #07111f;
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+.home-page .assurance-grid small {
+  display: block;
+  margin-top: 2px;
+  color: #33445c;
+  font-size: .8rem;
+  font-weight: 500;
+  line-height: 1.35;
+}
+
+@media (max-width: 900px) {
+  .home-page .assurance-strip {
+    padding: 26px 0;
+  }
+
+  .home-page .assurance-grid {
+    column-gap: 24px;
+    row-gap: 22px;
+  }
+
+  .home-page .assurance-grid article {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 620px) {
+  .home-page .assurance-strip {
+    padding: 24px 0;
+  }
+
+  .home-page .assurance-grid {
+    column-gap: 18px;
+    row-gap: 20px;
+  }
+
+  .home-page .assurance-grid article {
+    gap: 12px;
+  }
+
+  .home-page .assurance-icon {
+    width: 50px;
+    height: 50px;
+    flex-basis: 50px;
+  }
+
+  .home-page .assurance-symbol {
+    width: 27px;
+    height: 27px;
+  }
+
+  .home-page .assurance-grid strong {
+    font-size: .94rem;
+  }
+
+  .home-page .assurance-grid small {
+    font-size: .76rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .home-page .assurance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-page .assurance-grid article,
+  .home-page .assurance-grid article:last-child {
+    width: min(100%, 250px);
+    grid-column: auto;
+    justify-self: center;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .home-page .assurance-strip {
+    border-color: #29435f;
+    background: #091a2c;
+  }
+
+  .home-page .assurance-icon {
+    color: #75b5ff;
+    border-color: #365474;
+    background: #132a43;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, .24);
+  }
+
+  .home-page .assurance-grid strong {
+    color: #f7fbff;
+  }
+
+  .home-page .assurance-grid small {
+    color: #c5d3e4;
+  }
+}

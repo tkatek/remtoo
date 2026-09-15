@@ -1,0 +1,162 @@
+/* Return the full-width Mobile App panel to a balanced, normal section height. */
+#platform .mobile-app-section {
+  padding-bottom: clamp(24px, 2vw, 38px);
+}
+
+#platform .mobile-app-section .app-layout {
+  min-height: clamp(460px, 27vw, 520px);
+}
+
+#platform .mobile-app-section .app-copy {
+  padding: clamp(24px, 2.4vw, 46px) clamp(20px, 2.3vw, 44px);
+}
+
+#platform .mobile-app-section .icon-eyebrow {
+  font-size: clamp(11px, .7vw, 14px);
+}
+
+#platform .mobile-app-section .icon-eyebrow svg {
+  width: clamp(20px, 1.25vw, 25px);
+}
+
+#platform .mobile-app-section .app-copy h2 {
+  font-size: clamp(34px, 2.5vw, 46px);
+  line-height: 1.08;
+}
+
+#platform .mobile-app-section .app-copy > p:not(.eyebrow) {
+  max-width: 500px;
+  margin: clamp(11px, .9vw, 17px) 0;
+  font-size: clamp(13px, .85vw, 16px);
+}
+
+#platform .mobile-app-section .app-benefits {
+  margin-bottom: clamp(17px, 1.25vw, 24px);
+  gap: clamp(7px, .58vw, 11px);
+}
+
+#platform .mobile-app-section .app-benefits li {
+  gap: clamp(7px, .55vw, 11px);
+  font-size: clamp(12px, .78vw, 15px);
+}
+
+#platform .mobile-app-section .app-benefits li::before {
+  width: clamp(20px, 1.3vw, 26px);
+  height: clamp(20px, 1.3vw, 26px);
+}
+
+#platform .mobile-app-section .store-badges {
+  gap: clamp(8px, .7vw, 13px);
+}
+
+#platform .mobile-app-section .store-badges a {
+  min-width: clamp(140px, 8.8vw, 168px);
+  height: clamp(42px, 2.65vw, 50px);
+  padding-inline: clamp(9px, .65vw, 13px);
+}
+
+#platform .mobile-app-section .store-badges a > span {
+  font-size: clamp(20px, 1.3vw, 25px);
+}
+
+#platform .mobile-app-section .store-badges small {
+  font-size: clamp(7px, .47vw, 9px);
+}
+
+#platform .mobile-app-section .store-badges strong {
+  font-size: clamp(14px, .95vw, 18px);
+}
+
+#platform .mobile-app-section .app-phones {
+  height: clamp(420px, 25vw, 480px);
+  padding: clamp(12px, 1vw, 18px) clamp(10px, 1vw, 19px);
+  gap: clamp(8px, .72vw, 14px);
+}
+
+#platform .mobile-app-section .app-phone,
+#platform .mobile-app-section .app-phone.phone-one,
+#platform .mobile-app-section .app-phone.phone-two,
+#platform .mobile-app-section .app-phone.phone-three,
+#platform .mobile-app-section .app-phone.phone-four {
+  max-width: clamp(180px, 10.8vw, 205px);
+  font-size: clamp(6px, .5vw, 9.5px);
+}
+
+@media (max-width: 900px) {
+  #platform .mobile-app-section .app-layout {
+    min-height: 0;
+  }
+
+  #platform .mobile-app-section .app-copy {
+    padding: 32px 28px 18px;
+  }
+
+  #platform .mobile-app-section .app-copy h2 {
+    font-size: clamp(32px, 4.5vw, 38px);
+  }
+
+  #platform .mobile-app-section .app-phones {
+    width: min(850px, 100%);
+    height: clamp(365px, 47vw, 420px);
+    padding: 12px 14px 20px;
+    margin-inline: auto;
+  }
+
+  #platform .mobile-app-section .app-phone,
+  #platform .mobile-app-section .app-phone.phone-one,
+  #platform .mobile-app-section .app-phone.phone-two,
+  #platform .mobile-app-section .app-phone.phone-three,
+  #platform .mobile-app-section .app-phone.phone-four {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 620px) {
+  #platform .mobile-app-section .app-copy {
+    padding: 30px 18px 14px;
+  }
+
+  #platform .mobile-app-section .app-copy h2 {
+    font-size: clamp(30px, 7vw, 36px);
+  }
+
+  #platform .mobile-app-section .app-phones {
+    display: grid;
+    width: 100%;
+    height: auto;
+    min-height: 690px;
+    padding: 18px 8px 24px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: minmax(314px, auto);
+    gap: 18px 10px;
+  }
+
+  #platform .mobile-app-section .app-phone,
+  #platform .mobile-app-section .app-phone.phone-one,
+  #platform .mobile-app-section .app-phone.phone-two,
+  #platform .mobile-app-section .app-phone.phone-three,
+  #platform .mobile-app-section .app-phone.phone-four {
+    width: min(100%, 145px);
+    max-width: 145px;
+    font-size: 6.1px;
+  }
+}
+
+@media (max-width: 380px) {
+  #platform .mobile-app-section .app-phones {
+    min-height: 620px;
+    padding-block: 16px 20px;
+    grid-auto-rows: minmax(282px, auto);
+    gap: 16px 8px;
+  }
+
+  #platform .mobile-app-section .app-phone,
+  #platform .mobile-app-section .app-phone.phone-one,
+  #platform .mobile-app-section .app-phone.phone-two,
+  #platform .mobile-app-section .app-phone.phone-three,
+  #platform .mobile-app-section .app-phone.phone-four {
+    width: min(100%, 130px);
+    max-width: 130px;
+    font-size: 5.8px;
+  }
+}

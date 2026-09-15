@@ -1,0 +1,373 @@
+/* Shared photographic device compositions.
+   The supplied PNGs already contain the hardware and UI, so no extra frame is drawn. */
+.remtoo-device-stage {
+  position: relative;
+  isolation: isolate;
+}
+
+.remtoo-device-stage::after {
+  position: absolute;
+  z-index: 0;
+  inset: 8% 1% 3%;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 60% 43%, rgba(97, 177, 255, .2), transparent 36%),
+    radial-gradient(ellipse at 54% 72%, rgba(42, 119, 209, .11), transparent 56%);
+  content: "";
+  pointer-events: none;
+}
+
+.remtoo-photo-device {
+  margin: 0;
+  padding: 0 !important;
+  overflow: visible !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  outline: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  filter: none !important;
+  aspect-ratio: auto !important;
+  transform-origin: 50% 78%;
+  backface-visibility: hidden;
+}
+
+.remtoo-device-photo {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 24px 30px rgba(15, 38, 73, .16))
+    drop-shadow(0 5px 10px rgba(15, 38, 73, .1));
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+/* Platform: retain the laptop → tablet → phone → all sequence geometry. */
+#platform .hero-devices.device-showcase {
+  overflow: hidden;
+}
+
+#platform .device-showcase .platform-laptop {
+  top: auto;
+  bottom: 10%;
+  left: 4%;
+  width: 67%;
+}
+
+#platform .device-showcase .platform-tablet {
+  top: 3%;
+  right: 9%;
+  width: 31%;
+  aspect-ratio: auto;
+}
+
+#platform .device-showcase .platform-phone {
+  top: auto;
+  right: -4%;
+  bottom: 15%;
+  width: 29%;
+  aspect-ratio: auto;
+}
+
+#platform .device-showcase .platform-phone::before,
+#platform .device-showcase .platform-phone::after {
+  display: none !important;
+}
+
+#platform .device-showcase .showcase-device {
+  transform-origin: 50% 78%;
+}
+
+#platform .device-showcase .showcase-phone {
+  transform-origin: 50% 34%;
+}
+
+#platform .device-showcase[data-sequence-step="2"] .showcase-phone {
+  translate: 0 -4% !important;
+}
+
+#platform .device-showcase .hero-note,
+#platform .device-sequence-ui,
+#platform .device-swipe-streak {
+  z-index: 20;
+}
+
+/* Default page */
+.home-device-stage {
+  overflow: visible;
+}
+
+.home-device-stage .home-device-halo {
+  z-index: 0;
+}
+
+.home-device-stage .home-laptop {
+  z-index: 2;
+  right: 4%;
+  bottom: 1%;
+  width: min(90%, 790px);
+}
+
+.home-device-stage .home-phone {
+  z-index: 4;
+  right: -7%;
+  bottom: 9%;
+  width: min(34%, 292px);
+  aspect-ratio: auto;
+  transform: rotate(1.2deg);
+}
+
+.home-device-stage .home-hero-note {
+  z-index: 7;
+}
+
+/* Curriculum: the tablet is the primary curriculum canvas. */
+.curriculum-device-stage {
+  overflow: visible;
+}
+
+.curriculum-device-stage .curriculum-laptop {
+  z-index: 2;
+  top: 0;
+  right: 18%;
+  bottom: auto;
+  width: 48%;
+}
+
+.curriculum-device-stage .curriculum-phone {
+  z-index: 5;
+  right: -5%;
+  bottom: -1%;
+  width: 31%;
+  aspect-ratio: auto;
+  transform: rotate(1.4deg);
+}
+
+/* Demo */
+.demo-device-stage {
+  overflow: visible;
+}
+
+.demo-device-stage .demo-laptop {
+  z-index: 2;
+  top: -6%;
+  left: 4%;
+  width: 73%;
+}
+
+.demo-device-stage .demo-hero-phone {
+  z-index: 5;
+  right: -2%;
+  bottom: -1%;
+  width: 29%;
+}
+
+/* Let the desktop product composition use the full visual stage. */
+@media (min-width: 901px) {
+  .demo-page .demo-device-stage .demo-laptop {
+    top: -9%;
+    left: -1%;
+    width: 82%;
+  }
+
+  .demo-page .demo-device-stage .demo-hero-phone {
+    right: -7%;
+    bottom: -4%;
+    width: 32%;
+  }
+}
+
+/* Pricing */
+.pricing-device-stage {
+  overflow: visible;
+}
+
+.pricing-device-stage .pricing-laptop {
+  z-index: 2;
+  top: -5%;
+  left: 6%;
+  width: 76%;
+}
+
+.pricing-device-stage .pricing-phone {
+  z-index: 4;
+  top: auto;
+  right: -3%;
+  bottom: -1%;
+  width: 29%;
+}
+
+@media (max-width: 1180px) {
+  #platform .device-showcase .platform-laptop { width: 70%; }
+  #platform .device-showcase .platform-tablet { right: 7%; width: 33%; }
+  #platform .device-showcase .platform-phone { right: -5%; width: 31%; }
+}
+
+@media (max-width: 1024px) {
+  .home-device-stage .home-laptop { right: 6%; width: min(88%, 700px); }
+  .home-device-stage .home-phone { right: -5%; width: min(32%, 255px); }
+
+  .curriculum-device-stage .curriculum-laptop { right: 23%; width: 47%; }
+  .curriculum-device-stage .curriculum-phone { right: 2%; width: 28%; }
+}
+
+@media (max-width: 900px) {
+  #platform .device-showcase .platform-laptop { left: 3%; width: 70%; }
+  #platform .device-showcase .platform-tablet { top: 2%; right: 8%; width: 32%; }
+  #platform .device-showcase .platform-phone { right: -4%; width: 30%; }
+
+  .home-device-stage .home-laptop { right: 7%; bottom: 4%; width: 88%; }
+  .home-device-stage .home-phone { right: -2%; bottom: 11%; width: 31%; }
+
+  .demo-device-stage .demo-laptop { top: -3%; left: 3%; width: 75%; }
+  .demo-device-stage .demo-hero-phone { right: 1%; width: 29%; }
+
+  .pricing-device-stage .pricing-laptop { top: -4%; left: 3%; width: 78%; }
+  .pricing-device-stage .pricing-phone { right: 0; width: 30%; }
+}
+
+@media (max-width: 700px) {
+  /* Center the visible hardware as one composition despite the PNGs' transparent canvas. */
+  .curriculum-device-stage .curriculum-laptop { top: 1%; right: 40%; width: 45%; }
+  .curriculum-device-stage .curriculum-phone { right: 10%; width: 36%; }
+}
+
+@media (max-width: 620px) {
+  .remtoo-device-stage::after {
+    inset: 9% -5% 3%;
+  }
+
+  #platform .hero-devices.device-showcase {
+    height: clamp(300px, 79vw, 385px);
+  }
+
+  #platform .device-showcase .platform-laptop {
+    left: 2%;
+    width: 75%;
+  }
+
+  #platform .device-showcase .platform-tablet {
+    top: 3%;
+    right: 5%;
+    width: 35%;
+  }
+
+  #platform .device-showcase .platform-phone {
+    right: -8%;
+    width: 40%;
+  }
+
+  .home-device-stage .home-laptop {
+    right: 5%;
+    bottom: 6%;
+    width: 92%;
+  }
+
+  .home-device-stage .home-phone {
+    right: -8%;
+    bottom: 12%;
+    width: 42%;
+  }
+
+  .curriculum-device-stage .curriculum-laptop {
+    top: 3%;
+    right: 44%;
+    width: 43%;
+  }
+
+  .curriculum-device-stage .curriculum-phone {
+    right: 6%;
+    bottom: 0;
+    width: 43%;
+  }
+
+  .demo-device-stage .demo-laptop {
+    top: -4%;
+    left: -1%;
+    width: 85%;
+  }
+
+  .demo-device-stage .demo-hero-phone {
+    right: -8%;
+    bottom: -2%;
+    width: 42%;
+  }
+
+  .pricing-device-stage .pricing-laptop {
+    top: -5%;
+    left: -1%;
+    width: 87%;
+  }
+
+  .pricing-device-stage .pricing-phone {
+    right: -8%;
+    bottom: -2%;
+    width: 42%;
+  }
+}
+
+@media (max-width: 440px) {
+  #platform .device-showcase .platform-laptop { width: 77%; }
+  #platform .device-showcase .platform-tablet { right: 3%; width: 37%; }
+  #platform .device-showcase .platform-phone { right: -10%; width: 44%; }
+
+  .home-device-stage .home-laptop { right: 4%; width: 94%; }
+  .home-device-stage .home-phone { right: -11%; width: 46%; }
+
+  .curriculum-device-stage .curriculum-laptop { right: 45%; width: 45%; }
+  .curriculum-device-stage .curriculum-phone { right: 3%; width: 47%; }
+
+  .demo-device-stage .demo-laptop { left: -3%; width: 89%; }
+  .demo-device-stage .demo-hero-phone { right: -11%; width: 47%; }
+
+  .pricing-device-stage .pricing-laptop { left: -3%; width: 90%; }
+  .pricing-device-stage .pricing-phone { right: -11%; width: 47%; }
+}
+
+@media (prefers-color-scheme: dark) {
+  .remtoo-device-stage::after {
+    background:
+      radial-gradient(circle at 60% 43%, rgba(62, 157, 255, .27), transparent 37%),
+      radial-gradient(ellipse at 54% 72%, rgba(20, 82, 151, .2), transparent 58%);
+  }
+
+  .remtoo-device-photo {
+    filter:
+      drop-shadow(0 0 1px rgba(205, 226, 255, .45))
+      drop-shadow(0 28px 38px rgba(0, 0, 0, .42));
+  }
+
+  #platform .device-sequence-ui {
+    border-color: rgba(91, 135, 181, .5);
+    background: rgba(9, 28, 47, .82);
+    color: #d9eaff;
+    box-shadow: 0 10px 28px rgba(0, 5, 13, .26);
+  }
+
+  #platform .device-sequence-dots i { background: #44617f; }
+  #platform .device-sequence-dots i.active { background: #5aa6ff; }
+}
+
+:root[data-theme="dark"] .remtoo-device-stage::after {
+  background:
+    radial-gradient(circle at 60% 43%, rgba(62, 157, 255, .27), transparent 37%),
+    radial-gradient(ellipse at 54% 72%, rgba(20, 82, 151, .2), transparent 58%);
+}
+
+:root[data-theme="dark"] .remtoo-device-photo {
+  filter:
+    drop-shadow(0 0 1px rgba(205, 226, 255, .45))
+    drop-shadow(0 28px 38px rgba(0, 0, 0, .42));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .remtoo-photo-device,
+  .remtoo-device-photo {
+    animation: none !important;
+    transition: none !important;
+  }
+}

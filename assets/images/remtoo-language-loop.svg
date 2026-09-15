@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" fill="none">
+  <defs>
+    <linearGradient id="language-blue" x1="26" y1="18" x2="190" y2="132" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0874F9"/>
+      <stop offset="1" stop-color="#78BEFF"/>
+    </linearGradient>
+  </defs>
+  <path d="M22 31c0-8.3 6.7-15 15-15h75c8.3 0 15 6.7 15 15v30c0 8.3-6.7 15-15 15H66L43 90l5-14H37c-8.3 0-15-6.7-15-15V31Z" stroke="url(#language-blue)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M46 39h56M46 53h38" stroke="#78BEFF" stroke-width="3" stroke-linecap="round" opacity=".76"/>
+  <path d="M114 91c0-7.2 5.8-13 13-13h55c7.2 0 13 5.8 13 13v23c0 7.2-5.8 13-13 13h-12l4 11-19-11h-28c-7.2 0-13-5.8-13-13V91Z" stroke="url(#language-blue)" stroke-width="3" stroke-linejoin="round"/>
+  <path d="M136 99h37M136 111h25" stroke="#78BEFF" stroke-width="3" stroke-linecap="round" opacity=".76"/>
+  <path d="M75 99c9 17 22 24 39 20" stroke="#0874F9" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="2 9" opacity=".74"/>
+  <circle cx="75" cy="99" r="4" fill="#0874F9"/>
+  <path d="m180 25 2.8 7.2L190 35l-7.2 2.8L180 45l-2.8-7.2L170 35l7.2-2.8L180 25Z" fill="#78BEFF" opacity=".86"/>
+</svg>

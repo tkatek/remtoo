@@ -1,0 +1,591 @@
+/*
+ * Site-wide readability layer
+ *
+ * This file is loaded last on every public page. It raises genuine editorial
+ * copy to a comfortable reading size and weight without resizing the miniature
+ * interface text inside the product illustrations.
+ */
+:root {
+  --remtoo-reading-text: #000;
+  --remtoo-reading-body-size: clamp(1rem, calc(.94rem + .28vw), 1.125rem);
+  --remtoo-reading-support-size: clamp(.9375rem, calc(.9rem + .16vw), 1rem);
+  --remtoo-reading-line-height: 1.55;
+}
+
+/* Home */
+.home-page #main-content :is(
+  .home-hero-description,
+  .home-proof-points li,
+  .needs-intro,
+  .need-card-copy p,
+  .comparison-column li,
+  .sample-card > p,
+  .curriculum-credit,
+  .transform-copy li,
+  .three-steps p,
+  .launch-note,
+  .price-card li,
+  .logo-card > p
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-body-size);
+  font-weight: 700;
+  line-height: var(--remtoo-reading-line-height);
+}
+
+.home-page #main-content .home-hero-description {
+  font-size: clamp(1.125rem, 1.16vw, 1.32rem);
+}
+
+.home-page #main-content :is(
+  .home-kicker,
+  .needs-kicker,
+  .needs-signoff,
+  .home-lesson-card > small,
+  .price-label,
+  .price small,
+  .assurance-grid small
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.home-page #main-content :is(
+  .home-lesson-card h3,
+  .three-steps b,
+  .assurance-grid strong
+) {
+  color: var(--remtoo-reading-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.home-page #main-content .home-lesson-card h3 {
+  font-size: 1.125rem;
+}
+
+/* Platform */
+#platform :is(
+  .hero-description,
+  .section-heading > p:not(.eyebrow):not(.platform-features-brand),
+  .platform-feature-copy > p,
+  .audience-copy > p:not(.audience-label),
+  .audience-copy li,
+  .app-copy > p:not(.eyebrow),
+  .testimonial-grid blockquote,
+  .final-cta p
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-body-size);
+  font-weight: 700;
+  line-height: var(--remtoo-reading-line-height);
+}
+
+#platform :is(
+  .eyebrow,
+  .platform-features-brand,
+  .audience-label,
+  .hero-highlights small,
+  .testimonial-grid footer small
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+#platform :is(.hero-highlights strong, .testimonial-grid footer strong) {
+  color: var(--remtoo-reading-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+#platform .testimonial-rail > .testimonial-card footer strong {
+  color: var(--remtoo-reading-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+#platform .testimonial-rail > .testimonial-card footer small {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* Curriculum */
+#main-content :is(
+  .curr-hero-description,
+  .curr-section-heading > p,
+  .level-card > p,
+  .topic-card > p,
+  .topic-card-copy > p,
+  #lesson-flow .lesson-flow-intro,
+  #lesson-flow .lesson-step > p,
+  .lesson-preview-copy > p,
+  .lesson-preview-trust li,
+  .lesson-outcomes li,
+  .curr-testimonial-grid blockquote,
+  .curriculum-cta p
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-body-size);
+  font-weight: 700;
+  line-height: var(--remtoo-reading-line-height);
+}
+
+#main-content :is(
+  .curr-eyebrow,
+  .topics-kicker,
+  .lesson-kicker,
+  .curr-hero-highlights strong,
+  .curr-hero-highlights small,
+  .curr-trust-card strong,
+  .curr-trust-card small,
+  .level-top strong,
+  .lesson-count small,
+  .topic-card h3,
+  .curr-testimonial-grid footer small
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+#main-content .curr-testimonial-grid footer strong {
+  color: var(--remtoo-reading-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/* The lesson preview uses its proof row as a compact visual unit, not body copy. */
+#main-content #lesson-flow .lesson-preview-copy > p {
+  color: var(--remtoo-reading-text);
+  font-size: clamp(1rem, calc(.95rem + .22vw), 1.125rem);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+#main-content #lesson-flow .lesson-preview-trust li {
+  color: var(--remtoo-reading-text);
+  font-size: clamp(.95rem, calc(.91rem + .14vw), 1rem);
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+@media (min-width: 361px) and (max-width: 430px) {
+  #main-content #lesson-flow .lesson-preview-trust li {
+    font-size: clamp(.84rem, 3.5vw, .9rem);
+    line-height: 1.22;
+  }
+}
+
+@media (max-width: 360px) {
+  #main-content #lesson-flow .lesson-preview-trust li {
+    font-size: .78rem;
+    line-height: 1.22;
+  }
+}
+
+/* Legacy pricing layout (kept for the existing fallback markup). */
+.pricing-page #main-content :is(
+  .pricing-hero-lead,
+  .pricing-hero-points li,
+  .pricing-curriculum-note p,
+  .pricing-billing-context,
+  .pricing-plan-head p,
+  .pricing-billing-detail,
+  .pricing-capacity,
+  .pricing-plan-card h4,
+  .pricing-plan-card li,
+  .pricing-brand-promise > p,
+  .pricing-brand-promise li,
+  .pricing-faq details p,
+  .pricing-cta-copy p,
+  .pricing-cta-trust p
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-body-size);
+  font-weight: 700;
+  line-height: var(--remtoo-reading-line-height);
+}
+
+.pricing-page #main-content :is(
+  .pricing-eyebrow,
+  .pricing-savings-badge,
+  .pricing-popular,
+  .pricing-scroll-hint,
+  .pricing-faq summary,
+  .pricing-cta-action small
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+/* Current pricing comparison light-mode default. Dark mode is finalized below. */
+.pricing-reference-main {
+  --remtoo-reading-text: #000;
+}
+
+.pricing-reference-main :is(
+  .compare-hero > p:last-child,
+  .compare-common-header p,
+  .compare-plan-name p,
+  .compare-feature-list li,
+  .compare-plan-features h3,
+  .compare-plan-features li,
+  .compare-plan-note,
+  .compare-trust-lead p,
+  .compare-trust > ul li
+) {
+  color: var(--remtoo-reading-text);
+  font-weight: 700;
+  line-height: var(--remtoo-reading-line-height);
+}
+
+.pricing-reference-main .compare-hero > p:last-child {
+  font-size: clamp(1rem, 2.45vw, 1.48rem);
+}
+
+.pricing-reference-main :is(.compare-common-header p, .compare-plan-name p) {
+  font-size: clamp(1rem, 2vw, 1.22rem);
+}
+
+.pricing-reference-main .compare-feature-list li {
+  font-size: clamp(1rem, 2vw, 1.27rem);
+}
+
+.pricing-reference-main :is(.compare-plan-features h3, .compare-plan-features li) {
+  font-size: clamp(1rem, 1.5vw, 1.18rem);
+}
+
+.pricing-reference-main :is(.compare-plan-note, .compare-trust-lead p, .compare-trust > ul li) {
+  font-size: var(--remtoo-reading-body-size);
+}
+
+.pricing-reference-main :is(
+  .compare-kicker,
+  .compare-plan-price > span,
+  .compare-plan-price small,
+  .compare-journey small
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.pricing-reference-main .compare-kicker strong {
+  color: inherit;
+}
+
+.pricing-reference-main .compare-journey strong {
+  color: var(--remtoo-reading-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+.pricing-page #main-content .pricing-curriculum-note strong {
+  color: inherit;
+  font-size: inherit;
+  font-weight: 800;
+}
+
+.pricing-reference-main :is(.compare-plan-price, .compare-plan-price strong) {
+  color: var(--remtoo-reading-text);
+}
+
+/* Demo and booking */
+.demo-page #main-content :is(
+  .demo-hero-description,
+  .demo-check-list li,
+  .demo-trust-row > div > p:first-child,
+  .demo-panel-heading p,
+  .demo-preview-card li > p,
+  .demo-schedule-intro > p,
+  .demo-time-picker > p,
+  .demo-timezone-banner p,
+  .demo-duration-description,
+  .demo-meeting-feature p,
+  .demo-testimonials-intro,
+  .demo-testimonial-grid blockquote,
+  .demo-final-cta p
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-body-size);
+  font-weight: 700;
+  line-height: var(--remtoo-reading-line-height);
+}
+
+.demo-page #main-content :is(
+  .demo-kicker,
+  .demo-preview-card small,
+  .demo-duration-rating small,
+  .demo-schedule-action small,
+  .demo-testimonial-grid footer small,
+  .demo-final-cta small
+) {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.demo-page #main-content :is(
+  .demo-preview-card li strong,
+  .demo-testimonial-grid footer strong
+) {
+  color: var(--remtoo-reading-text);
+  font-size: 1rem;
+  font-weight: 800;
+  line-height: 1.4;
+}
+
+/*
+ * The enlarged demo-card copy needs to participate in layout above the
+ * absolutely positioned trust bar. Reserving its footprint here prevents the
+ * final meeting benefit from sliding underneath the bar as text wraps.
+ */
+@media (min-width: 701px) {
+  .demo-page #main-content .demo-duration-card {
+    height: auto;
+    min-height: 634px;
+  }
+
+  .demo-page #main-content :is(.demo-duration-content, .demo-duration-copy) {
+    position: relative;
+    inset: auto;
+    margin-left: 39px;
+    padding: 40px 0 164px;
+  }
+}
+
+.demo-page .demo-fields-grid > label {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.demo-redirect-page {
+  --remtoo-reading-text: #000;
+}
+
+.demo-redirect-page #main-content p {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-body-size);
+  font-weight: 700;
+  line-height: var(--remtoo-reading-line-height);
+}
+
+@media (max-width: 700px) {
+  .home-page #main-content .curriculum-home .sample-card {
+    min-height: 158px;
+    padding: 12px;
+    grid-template-columns: minmax(82px, 34%) minmax(0, 1fr);
+    align-content: center;
+    column-gap: 8px;
+    aspect-ratio: auto;
+  }
+
+  .home-page #main-content .curriculum-home .sample-gift {
+    width: clamp(78px, 24vw, 112px);
+    height: clamp(78px, 24vw, 112px);
+  }
+
+  .home-page #main-content .curriculum-home .sample-card > h3 {
+    margin: 0 0 4px;
+    font-size: clamp(.92rem, 4vw, 1.05rem);
+    line-height: 1.12;
+  }
+
+  .home-page #main-content .curriculum-home .sample-card > p {
+    margin: 0 0 7px;
+    font-size: clamp(.72rem, 3vw, .82rem);
+    font-weight: 700;
+    line-height: 1.28;
+    text-wrap: pretty;
+  }
+
+  .home-page #main-content .curriculum-home .sample-card > .home-button {
+    min-height: 44px;
+    height: 44px;
+    padding: 8px 10px;
+    font-size: clamp(.76rem, 3.35vw, .9rem);
+  }
+}
+
+@media (prefers-color-scheme: light) and (forced-colors: none) {
+  .home-page #main-content .curriculum-home .home-lesson-card:not(.sample-card) > h3 {
+    color: #fff;
+  }
+}
+
+/* Copy on saturated panels remains high-contrast white. */
+#platform .final-cta p,
+#main-content .curriculum-cta p,
+.pricing-page #main-content .pricing-cta :is(p, small),
+.demo-page #main-content .demo-final-cta :is(p, small) {
+  color: #fff;
+}
+
+/* Shared drawer note and footer. */
+.remtoo-drawer-note {
+  color: var(--remtoo-reading-text);
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.remtoo-footer-brand > p,
+.remtoo-footer-column a,
+.remtoo-footer nav a,
+.remtoo-footer-partner small,
+.remtoo-footer-bec small,
+.remtoo-footer-bottom {
+  color: #fff;
+  font-size: var(--remtoo-reading-support-size);
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.remtoo-footer-column h2,
+.remtoo-footer nav h2,
+.remtoo-footer-partner strong,
+.remtoo-footer-bec strong {
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --remtoo-reading-text: var(--rt-text, #f7fbff);
+  }
+}
+
+/*
+ * Final preference-aware reading colors for the rebuilt Pricing comparison
+ * and Demo booking experience. This layer deliberately follows the browser's
+ * live prefers-color-scheme value; no saved theme or page reload is required.
+ */
+body.demo-page .demo-meeting-feature p span {
+  color: inherit;
+}
+
+@media (prefers-color-scheme: light) {
+  body.pricing-page .pricing-reference-main,
+  body.demo-page #main-content {
+    --remtoo-preference-text: #000;
+    --remtoo-reading-text: #000;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  body.pricing-page .pricing-reference-main,
+  body.demo-page #main-content {
+    --remtoo-preference-text: #fff;
+    --remtoo-reading-text: #fff;
+  }
+
+  body.pricing-page .pricing-reference-main {
+    --compare-navy: #fff;
+    --compare-copy: #fff;
+  }
+
+  body.pricing-page .pricing-reference-main .compare-journey li:not(:last-child)::after {
+    color: #79b9ff;
+  }
+}
+
+body.pricing-page .pricing-reference-main :is(
+  .compare-kicker,
+  .compare-hero h2,
+  .compare-hero > p:last-child,
+  .compare-common-header h2,
+  .compare-common-header p,
+  .compare-feature-list li,
+  .compare-plan-tabs button:not([aria-selected="true"]),
+  .compare-plan-name h2,
+  .compare-plan-name p,
+  .compare-plan-price,
+  .compare-plan-price > span,
+  .compare-plan-price strong,
+  .compare-plan-price small,
+  .compare-plan-features h3,
+  .compare-plan-features li,
+  .compare-plan-note,
+  .compare-journey strong,
+  .compare-journey small,
+  .compare-trust h2,
+  .compare-trust-lead p,
+  .compare-trust > ul li
+) {
+  color: var(--remtoo-preference-text);
+}
+
+body.pricing-page .pricing-reference-main .compare-plan-tabs button[aria-selected="true"],
+body.pricing-page .pricing-reference-main .compare-plan-cta {
+  background: linear-gradient(135deg, #075fe1, #0664d8);
+  color: #fff;
+}
+
+body.demo-page #main-content :is(
+  .demo-hero-copy h1,
+  .demo-hero-description,
+  .demo-check-list li,
+  .demo-trust-row > div > p:first-child,
+  .demo-rating strong,
+  .demo-panel-heading h2,
+  .demo-panel-heading p,
+  .demo-fields-grid > label,
+  .demo-preview-card h2,
+  .demo-preview-card li strong,
+  .demo-preview-card li small,
+  .demo-schedule-intro h2,
+  .demo-schedule-intro > p,
+  .demo-calendar-header strong,
+  .demo-weekdays span,
+  .demo-calendar-grid button:not(.selected):not(:disabled),
+  .demo-time-picker > p,
+  .demo-time-list button:not(.selected),
+  .demo-timezone-banner p,
+  .demo-duration-heading h2,
+  .demo-duration-description,
+  .demo-meeting-feature p,
+  .demo-meeting-feature p span,
+  .demo-rating-copy strong,
+  .demo-rating-copy small,
+  .demo-schedule-action small,
+  .demo-testimonials > h2,
+  .demo-testimonials-intro,
+  .demo-testimonial-grid blockquote,
+  .demo-testimonial-grid footer strong,
+  .demo-testimonial-grid footer small
+) {
+  color: var(--remtoo-preference-text);
+}
+
+body.demo-page #main-content .demo-fields-grid :is(input, select, textarea) {
+  color: var(--remtoo-preference-text);
+}
+
+body.demo-page #main-content .demo-final-cta {
+  --remtoo-reading-text: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  body.demo-page #main-content .demo-fields-grid :is(input, textarea)::placeholder {
+    color: #8297b0;
+    opacity: 1;
+  }
+}
