@@ -1,9 +1,0 @@
-#platform { --pf-shell: calc(100vw - 64px); }
-
-@media (max-width: 1180px) {
-  #platform { --pf-shell: calc(100vw - 40px); }
-}
-
-@media (max-width: 620px) {
-  #platform { --pf-shell: calc(100vw - 28px); }
-}
